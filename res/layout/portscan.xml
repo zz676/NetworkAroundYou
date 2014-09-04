@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Zhisheng Zhou -->
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/computer" />
+
+            <TextView
+                android:id="@+id/host"
+                style="@style/ListTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/logo"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:text="0.0.0.0" />
+
+            <TextView
+                android:id="@+id/mac"
+                style="@style/ListTextSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/host"
+                android:layout_toRightOf="@+id/logo"
+                android:text="00:00:00:00:00:00" />
+
+            <TextView
+                android:id="@+id/vendor"
+                style="@style/ListTextSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/mac"
+                android:layout_toRightOf="@+id/logo"
+                android:text="NIC Vendor" />
+        </RelativeLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="5dp" >
+
+            <ListView
+                android:id="@+id/list_open"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ListView
+                android:id="@+id/list_closed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_scan"
+                style="@style/ButtonTop"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="0"
+                android:drawableLeft="@drawable/discover"
+                android:drawablePadding="15dp"
+                android:text="@string/btn_scan" />
+
+            <Button
+                android:id="@+id/btn_back"
+                style="@style/ButtonTop"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="0"
+                android:drawableLeft="@drawable/back"
+                android:drawablePadding="15dp"
+                android:text="@string/btn_back" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</TabHost>

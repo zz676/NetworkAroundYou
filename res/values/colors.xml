@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Zhisheng Zhou -->
+<resources>
+
+    <color name="purple1">#57068c</color>
+    <color name="purple2">#8426c1</color>
+    <color name="purple3">#be6ef2</color>
+    <color name="grey">#cccccc</color>
+    <color name="orange1">#ff9900</color>
+    <color name="orange2">#ff6600</color>
+    <color name="orange3">#ff3300</color>
+
+</resources>

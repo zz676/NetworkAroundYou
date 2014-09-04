@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) Zhisheng Zhou -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape>
+            <gradient android:angle="270" android:endColor="@color/purple1" android:startColor="@color/purple2" />
+
+            <stroke android:width="0dp" android:color="@color/purple1" />
+
+            <corners android:radius="3dp" />
+        </shape></item>
+    <item android:state_focused="true"><shape>
+            <gradient android:angle="270" android:endColor="@color/purple2" android:startColor="@color/purple3" />
+
+            <stroke android:width="0dp" android:color="@color/grey" />
+
+            <corners android:radius="3dp" />
+        </shape></item>
+
+</selector>
